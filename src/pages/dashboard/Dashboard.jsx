@@ -3,7 +3,7 @@ import { Card } from '@mui/material';
 import {
     Grid,
     Paper,
-    Box
+    Box,
 } from '@mui/material';
 
 const Dashboard = () => {
