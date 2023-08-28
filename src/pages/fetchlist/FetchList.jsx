@@ -46,20 +46,20 @@ const FetchList = () => {
         const imgID = getPokemonImgId(path[6])
         return (
             <Card p={2} sx={{
-                display: 'flex', height: 250, cursor: 'pointer',
+                display: 'flex', height: 100, cursor: 'pointer',
                 '&:hover': { backgroundColor: '#5acdbd', color: 'white' }
             }}>
                 <CardContent sx={{ flex: '5 5 auto' }}>
                     <Typography component="div" variant="h8">
                         N° {imgID}
                     </Typography>
-                    <Typography component="div" variant="h6">
-                        Nombre: {item.name}
-                    </Typography>
+                    <Typography component="div" variant="h8">
+                        {item.name}
+                    </Typography>   
                 </CardContent>
                 <CardMedia
                     component="img"
-                    sx={{ width: 150 }}
+                    sx={{ width: 100 }}
                     src={`${IMG_URL}/${imgID}.png`}
                     alt="Live from space album cover"
                 />
@@ -122,7 +122,7 @@ const FetchList = () => {
                                 backgroundColor: '#317b52', '&:hover': { backgroundColor: '#5acdbd' }
                             }}
                                 onClick={() => loadMore()}>
-                                <CardContent sx={{ flex: '1 0 auto' }}>
+                                <CardContent sx={{ flex: '5 5 auto' }}>
                                     <Typography component="div" variant="h5" sx={{ color: 'white' }}>
                                         Cargar Más
                                     </Typography>
