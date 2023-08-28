@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import api from "../../services/api";
 import { appActions } from "../../redux/appRedux";
-import { useDispatch} from "react-redux";
-import {IMG_URL} from "../../constants";
+import { useDispatch } from "react-redux";
+import { IMG_URL } from "../../constants";
 import {
     Grid,
     Paper,
@@ -46,21 +46,21 @@ const FetchList = () => {
         const imgID = getPokemonImgId(path[6])
         return (
             <Card p={2} sx={{
-                display: 'flex', height: 100, cursor: 'pointer',
+                display: 'flex', height: 250, cursor: 'pointer',
                 '&:hover': { backgroundColor: '#5acdbd', color: 'white' }
             }}>
-                <CardContent sx={{ flex: '1 0 auto' }}>
-                    <Typography component="div" variant="h5">
+                <CardContent sx={{ flex: '5 5 auto' }}>
+                    <Typography component="div" variant="h8">
                         N° {imgID}
                     </Typography>
-                    <Typography component="div" variant="h5">
-                        {item.name}
+                    <Typography component="div" variant="h6">
+                        Nombre: {item.name}
                     </Typography>
                 </CardContent>
                 <CardMedia
                     component="img"
-                    sx={{ width: 100 }}
-                    src={`${IMG_URL}${imgID}.png`}
+                    sx={{ width: 150 }}
+                    src={`${IMG_URL}/${imgID}.png`}
                     alt="Live from space album cover"
                 />
             </Card>

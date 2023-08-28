@@ -8,10 +8,13 @@ import {
     CardContent,
     Typography
 } from '@mui/material';
+import { appSelector } from "../../redux/appRedux";
 
 const Dashboard = () => {
 
-    const tasks = useSelector(state => state.todo) // obtengo el total de las tareas
+    const todo = useSelector(appSelector.todo)
+
+    const tasks = todo // obtengo el total de las tareas
     const completedTasks = tasks.filter(task => task.completed); // obtengo cantidad de tareas completadas
     const pendingTasks = tasks.filter(task => !task.completed); // obtengo cantidad de tareas pendientes
 
